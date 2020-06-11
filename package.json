@@ -1,0 +1,27 @@
+{
+  "name": "multilang",
+  "version": "1.0.0",
+  "description": "'provide multiple programming language support in viasocket'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmanGupta03/multilang.git"
+  },
+  "author": "walkover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmanGupta03/multilang/issues"
+  },
+  "homepage": "https://github.com/AmanGupta03/multilang#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "mongoose": "^5.9.18",
+    "uuidv4": "^6.1.0"
+  }
+}
