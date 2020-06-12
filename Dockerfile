@@ -1,5 +1,11 @@
 FROM python:3.8-slim-buster
-FROM php:7.4-cli
+
+
+
+
+
+
+
 FROM node:14 
 
 # Create app directory
@@ -19,3 +25,12 @@ COPY . .
 
 EXPOSE 8080
 CMD [ "node", "server.js" ]
+
+
+
+
+
+FROM php:7.4-cli
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+CMD [ "php", "./your-script.php" ]
