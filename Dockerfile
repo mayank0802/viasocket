@@ -21,5 +21,5 @@ FROM php:7.4-cli
 RUN docker-php-source extract \
     # do important things \
     && docker-php-source delete
-EXPOSE 8080
+EXPOSE 5000
 #CMD ["/start.sh"]
