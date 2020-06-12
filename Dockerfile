@@ -12,6 +12,9 @@ RUN npm install
 # RUN npm ci --only=production
 # Bundle app source
 #FROM php:7.4-cli
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+CMD [ "php", "./your-script.php" ]
 RUN docker-php-source extract \
     # do important things \
     && docker-php-source delete
