@@ -11,5 +11,8 @@ RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 # Bundle app source
-
+#FROM php:7.4-cli
+RUN docker-php-source extract \
+    # do important things \
+    && docker-php-source delete
 #CMD ["/start.sh"]
