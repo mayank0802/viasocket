@@ -19,4 +19,4 @@ COPY /usr/src/app/.
 
 EXPOSE 443 80
 
-CMD ["/start.sh"]
+#CMD ["/start.sh"]
