@@ -11,8 +11,12 @@ RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 # Bundle app source
-COPY . .
-EXPOSE 8080
-CMD [ "node", "server.js" ]
-COPY . /usr/src/myapp
-CMD [ "php", "./your-script.php" ]
+FROM sarthak2703/all-required-extensions-php:latest
+
+CMD [ "rm", "index.php" ]
+
+COPY app/ .
+
+EXPOSE 443 80
+
+CMD ["/start.sh"]
