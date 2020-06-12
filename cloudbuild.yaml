@@ -18,4 +18,4 @@ steps:
   - '--platform'
   - 'managed'
 images:
-- 'gcr.io/$PROJECT_ID/viasocket:$COMMIT_SHA
+- 'gcr.io/$PROJECT_ID/viasocket:$COMMIT_SHA'
