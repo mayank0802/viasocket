@@ -8,8 +8,11 @@ WORKDIR /usr/src/app
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
-
-RUN npm install
+RUN npm install \
+   && cd client \
+   && npm i yarn \
+   && yarn add react \
+   && yarn build \
 # If you are building your code for production
 # RUN npm ci --only=production
 
@@ -19,5 +22,4 @@ COPY . .
 EXPOSE 8080
 CMD [ "node", "server.js" ]
 COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
 CMD [ "php", "./your-script.php" ]
