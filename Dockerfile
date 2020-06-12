@@ -21,4 +21,5 @@ CMD [ "php", "./your-script.php" ]
 RUN docker-php-source extract \
     # do important things \
     && docker-php-source delete
+EXPOSE 8080
 #CMD ["/start.sh"]
