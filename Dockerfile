@@ -15,7 +15,7 @@ FROM sarthak2703/all-required-extensions-php:latest
 
 CMD [ "rm", "index.php" ]
 
-COPY /usr/src/app/ .
+COPY app/ .
 
 EXPOSE 443 80
 
