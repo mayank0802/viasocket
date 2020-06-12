@@ -1,25 +1,18 @@
 FROM python:3.8-slim-buster
 FROM php:7.4-cli
-FROM node:14 
-# Create app directory
+FROM node:14
 WORKDIR /usr/src/app
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# copy package.json
 COPY package*.json ./
+COPY client/package*.json ./client/
 RUN npm install \
    && cd client \
    && npm i yarn \
    && yarn add react \
    && yarn build \
-# If you are building your code for production
-# RUN npm ci --only=production
-
-# Bundle app source
 COPY . .
-
-EXPOSE 8080
-CMD [ "node", "server.js" ]
-COPY . /usr/src/myapp
-CMD [ "php", "./your-script.php" ]
+# builing Angular UI
+# RUN cd client && yarn build
+EXPOSE 3070
+ENTRYPOINT ["node"]
+CMD ["server.js"]
